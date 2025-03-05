@@ -1,10 +1,6 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-// Your web app's Firebase configuration
-// console.log(import.meta.env.VITE_FIREBASE_APIKEY)
 const firebaseConfig = {
   apiKey: "AIzaSyCZIuUs5pcMDKtNev33X5eqlpA2LLlI17E",
   authDomain: "react-redux-social-media-b9485.firebaseapp.com",
@@ -14,6 +10,6 @@ const firebaseConfig = {
   appId: "1:385888121461:web:6f47bb3a2de4311768be3c"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const auth=getAuth(app);
 export default app;
